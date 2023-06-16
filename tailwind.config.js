@@ -1,0 +1,50 @@
+module.exports = {
+  mode: "jit",
+  content: [
+    "./src/**/**/*.{js,ts,jsx,tsx,html,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,html,mdx}",
+  ],
+  darkMode: "class",
+  theme: {
+    screens: { md: { max: "1050px" }, sm: { max: "550px" } },
+    extend: {
+      colors: {
+        red: { 800: "#be1e2d", 900: "#c91515" },
+        green: { 900: "#1f6d1d", "900_3f": "#2c561e3f" },
+        black: { 900: "#000000", "900_3f": "#0000003f" },
+        light_green: { 800: "#3c9d1a" },
+        yellow: { 900: "#ed7d31" },
+        blue_gray: {
+          100: "#d9d9d9",
+          900: "#082647",
+          "900_01": "#1c344c",
+          "100_99": "#d9d9d999",
+        },
+        gray: {
+          100: "#f2f2f2",
+          300: "#d9dee3",
+          400: "#afafaf",
+          500: "#9d9d9d",
+          600: "#838383",
+          700: "#646464",
+          900: "#222222",
+          "400_99": "#b8b8b899",
+          "600_01": "#7b7b7b",
+          "400_01": "#bcbcbc",
+          "400_02": "#b3b3b3",
+        },
+        amber: { 600: "#fcaf04" },
+        cyan: { 300: "#58bbd1" },
+        white: { A700: "#ffffff" },
+      },
+      fontFamily: { poppins: "Poppins" },
+      boxShadow: {
+        bs2: "0px 4px  4px 0px #2c561e3f",
+        bs3: "0px 4px  4px 0px #b8b8b899",
+        bs1: "0px 4px  4px 0px #d9d9d999",
+        bs: "0px 4px  4px 0px #0000003f",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/forms")],
+};
