@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "6df7a201-3b9b-40cc-b352-a899524f7825",
+		"name": "Platform devops",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28064374",
+		"_collection_link": "https://galactic-shadow-630371.postman.co/workspace/New-Team-Workspace~dd3a5e20-7944-41ca-bca4-e2cf7b4fb20f/collection/21965799-6df7a201-3b9b-40cc-b352-a899524f7825?action=share&creator=28064374&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "list_platform_devops_accounts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "da2-p4sthxqnavguhejmjjmyrgxvfy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query MyQuery {\n  list_platform_devops_accounts(cloud: \"all\", customer: \"1cloudhub\") {\n    account_id\n    account_name\n    customer\n    cloud_platform\n    customer_approval_email\n    external_id\n    och_approval_email\n    status\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://s2y6se6j3zcd5giln2d7puk3fi.appsync-api.ap-south-1.amazonaws.com/graphql?",
+					"protocol": "https",
+					"host": [
+						"s2y6se6j3zcd5giln2d7puk3fi",
+						"appsync-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert_platform_devops_accounts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "da2-p4sthxqnavguhejmjjmyrgxvfy",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation MyMutation {\n  insert_platform_devops_accounts(account_id: \"234\", cloud_platform: \"234\", account_name: \"234\", customer: \"234\", customer_approval_email: \"234\", external_id: \"234\", och_approval_email: \"234\", status: \"234\") {\n    account_id\n    account_name\n    cloud_platform\n    company\n    customer_approval_email\n    external_id\n    och_approval_email\n    status\n  }\n}\n",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://s2y6se6j3zcd5giln2d7puk3fi.appsync-api.ap-south-1.amazonaws.com/graphql?",
+					"protocol": "https",
+					"host": [
+						"s2y6se6j3zcd5giln2d7puk3fi",
+						"appsync-api",
+						"ap-south-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
